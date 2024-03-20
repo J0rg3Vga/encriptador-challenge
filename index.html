@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="
+    Un encriptador de texto es una herramienta que toma un mensaje o texto de entrada y lo transforma en una versión 
+    cifrada utilizando algún tipo de algoritmo o clave">
+  <meta name="keywords"
+    content="Encriptado, Desencriptado">
+  <meta name="author" content="Jorge Vega Peinado">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>Encriptador</title>
+</head>
+
+<body>
+  <main>
+    <section class="section__1">
+      <header>
+        <div class="logo">
+          <a href="index.html"><img src="./utilities/Logo@2x.png" alt="Logo" /></a>
+        </div>
+
+        </header>
+
+      <div class="container__letf">
+        <textarea name="containertext" id="container__text" cols="30" rows="10" placeholder="Ingrese el texto aqui:"
+          onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241)"
+         ></textarea>
+
+        <div class=" container_btn">
+          <div class="guia">
+            <img src="./utilities/bi_exclamation-circle-fill-1.png" alt="alerta icon" />
+            <label for="guia">Solo letras minúsculas y sin acentos</label>
+          </div>
+
+          <div class="style__btn">
+            <button id="btn__encriptar" onclick="encriptarBtn()">Encriptar</button>
+            <button id="btn__desencriptar" onclick="desencriptarBtn()">Desencriptar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__2">
+      <div class="container__right">
+        <div class="img__munieco">
+          <img src="./utilities/Muñeco.png" alt="muñeco" />
+        </div>
+        <p id="text_1">Ningún mensaje fue encontrado</p>
+        <p id="text_2">Ingresa el texto que desees encriptar o desencriptar.</p>
+        
+        <div class="ocultar">
+          <p class="text__result"></p>
+        </div>
+        <div class="ocultar">
+          <button id="btn__copy" >Copiar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+</body>
+<script src="./assets/script.js"></script>
+
+  <footer>
+        <p class="pie">Designed by Jorge Vega @2024</p>
+</footer>     
+
+</html>
